@@ -1,5 +1,5 @@
-site_name: KI i SDLC
-site_description: En mulighetskatalog med 256 konkrete ideer for KI i hele systemutviklingens læringssløyfe.
+site_name: AI in the SDLC
+site_description: A catalog of 256 practical AI opportunities across the software delivery learning loop.
 site_url: https://grove.github.io/ai-sdlc/
 repo_url: https://github.com/grove/ai-sdlc
 repo_name: GitHub
@@ -7,7 +7,7 @@ edit_uri: edit/main/docs/
 
 theme:
   name: mkdocs
-  locale: nb
+  locale: en
   color_mode: auto
   user_color_mode_toggle: true
   nav_style: dark
@@ -15,8 +15,7 @@ theme:
 
 plugins:
   - search:
-      # Engelsk tegnsett bevarer sifrene i ID-er som P01; norsk beholder ordstammer.
-      lang: ['no', 'en']
+      lang: ['en']
       min_search_length: 2
 
 markdown_extensions:
@@ -30,34 +29,34 @@ extra_css:
   - assets/stylesheets/catalog.css
 
 nav:
-  - Start: index.md
-  - Læringssløyfen:
-      - Problem: steg/problem.md
-      - Hypotese: steg/hypotese.md
-      - Kontekst: steg/kontekst.md
-      - Agentutførelse: steg/agentutforelse.md
-      - Verifisering: steg/verifisering.md
-      - Produksjon: steg/produksjon.md
-      - Observasjon: steg/observasjon.md
-      - Læring: steg/laering.md
-  - Bruk katalogen:
-      - Leserveiledning: veiledning/leserveiledning.md
-      - Velg etter behov: veiledning/behov.md
-      - Mål effekten: veiledning/effektmaaling.md
-      - Arbeidsløp: arbeidslop.md
-      - Prosjektprofiler: prosjektprofiler.md
-      - Maler: maler.md
-  - Oppslag:
-      - Idéregister: register.md
-      - Begreper: begreper.md
-      - Kilder: kilder.md
-  - Forvaltning: forvaltning.md
+  - Home: index.md
+  - Learning Loop:
+      - Problem: stages/problem.md
+      - Hypothesis: stages/hypothesis.md
+      - Context: stages/context.md
+      - Agent Execution: stages/agent-execution.md
+      - Verification: stages/verification.md
+      - Production: stages/production.md
+      - Observation: stages/observation.md
+      - Learning: stages/learning.md
+  - Using the Catalog:
+      - How to Use: guides/how-to-use.md
+      - Find by Need: guides/find-by-need.md
+      - Measure Impact: guides/impact-measurement.md
+      - Worked Examples: workflows.md
+      - Project Profiles: project-profiles.md
+      - Templates: templates.md
+  - Reference:
+      - Idea Index: idea-index.md
+      - Glossary: glossary.md
+      - Sources: sources.md
+  - Maintenance: maintenance.md
 
-# Idésidene nås fra steg, register, andre ideer og søk, uten en meny med 256 valg.
+# Individual idea pages are reachable through stages, the index, links, and search.
 not_in_nav: |
-  /ideer/*.md
+  /ideas/*.md
 
-# Avvik stopper «mkdocs build --strict», også brutte interne ankerlenker.
+# Strict builds fail on link and navigation problems.
 validation:
   nav:
     omitted_files: warn
