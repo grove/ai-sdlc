@@ -1,0 +1,52 @@
+/* Små lesbarhetsjusteringer til MkDocs sitt innebygde tema. */
+body {
+  background-image: none;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.65;
+}
+
+.navbar-brand {
+  font-weight: 700;
+}
+
+[role="main"] h1,
+[role="main"] h2,
+[role="main"] h3 {
+  line-height: 1.25;
+  scroll-margin-top: 6rem;
+}
+
+[role="main"] h2 {
+  margin-top: 2rem;
+}
+
+[role="main"] a {
+  overflow-wrap: anywhere;
+}
+
+[role="main"] table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+[role="main"] th,
+[role="main"] td {
+  vertical-align: top;
+}
+
+[role="main"] blockquote {
+  border-left: 0.25rem solid var(--bs-primary);
+  padding-left: 1rem;
+}
+
+@media print {
+  .navbar,
+  .bs-sidebar {
+    display: none;
+  }
+
+  [role="main"] {
+    width: 100%;
+  }
+}

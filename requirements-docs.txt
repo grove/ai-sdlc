@@ -1,0 +1,21 @@
+# Byggverktøy og transitive avhengigheter låst for Python 3.12.
+# Oppdater i et rent miljø, og kjør katalogkontroll og strict-bygg før innlemming.
+# Kilde: https://www.mkdocs.org/user-guide/localizing-your-theme/
+babel==2.18.0
+click==8.5.1
+colorama==0.4.6; platform_system == 'Windows'
+ghp-import==2.1.0
+jinja2==3.1.6
+markdown==3.11.3
+markupsafe==3.0.4
+mergedeep==1.3.4
+mkdocs[i18n]==1.6.1
+mkdocs-get-deps==0.2.2
+packaging==26.3
+pathspec==1.1.1
+platformdirs==4.14.7
+python-dateutil==4.0.0
+pyyaml==6.0.3
+pyyaml-env-tag==1.1
+tzdata==2026.6
+watchdog==7.1.0
