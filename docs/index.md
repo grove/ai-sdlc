@@ -1,49 +1,49 @@
-# Mulighetskatalog for KI i SDLC
+# AI Opportunities Across the Software Development Life Cycle
 
-**256 konkrete ideer for bedre prosjektarbeid gjennom hele læringssløyfen.**
+**256 practical AI use cases, organized around an eight-stage delivery and learning loop.**
 
-Denne katalogen hjelper prosjekter å finne oppgaver der KI kan bidra til kortere tid til verdi, lavere samlet ressursbruk, bedre leveranser og høyere kvalitet. Den dekker utvikling av ny funksjonalitet, innsikt, eksisterende systemer, data, infrastruktur, drift, dokumentasjon og avvikling.
+Explore opportunities to reduce time and cost, increase throughput, improve quality, and achieve better user outcomes. The catalog covers product research, new development, existing systems, architecture, data, integration, infrastructure, operations, documentation, and system retirement.
 
-Problem → Hypotese → Kontekst → Agentutførelse → Verifisering → Produksjon → Observasjon → Læring
+**Problem → Hypothesis → Context → Agent Execution → Verification → Production → Observation → Learning**
 
-## Velg en inngang
+## Find a starting point
 
-| Hva trenger prosjektet? | Begynn her |
+| What you need | Start here |
 | --- | --- |
-| Finne tiltak mot en kjent utfordring | [Finn ideer ut fra behov](veiledning/behov.md) |
-| Se bredden av muligheter | [Åpne idéregisteret med alle 256 ideer](register.md) |
-| Velge og måle et konkret forsøk | [Utvelgelse og effektmåling](veiledning/effektmaaling.md) |
-| Koble flere ideer gjennom hele sløyfen | [Åtte sammenhengende arbeidsløp](arbeidslop.md) |
-| Tilpasse til en bestemt type prosjekt | [16 prosjektprofiler](prosjektprofiler.md) |
-| Komme raskt i gang med dokumentasjon | [Idékort, forsøkskort, agentinstruksjon og læringspost](maler.md) |
+| Address a known project challenge | [Find opportunities by need](guides/find-by-need.md) |
+| Browse all AI opportunities | [Idea index — all 256 ideas](idea-index.md) |
+| Design and measure an experiment | [Impact measurement guide](guides/impact-measurement.md) |
+| Connect ideas through a full delivery cycle | [Eight end-to-end workflows](workflows.md) |
+| Adapt to a specific environment | [16 project profiles](project-profiles.md) |
+| Use practical planning and learning tools | [Templates](templates.md) |
 
-Velg prosjektets viktigste problem, finn aktuelle ideer og prøv én avgrenset endring med avtalt målegrunnlag og ansvarlig eier. [Leserveiledningen](veiledning/leserveiledning.md) forklarer feltene i hver idé og de felles forutsetningene.
+Start with a meaningful problem and choose one bounded, measurable improvement. Assign an owner, agree on a baseline and guardrails, and assess the outcome beyond the initial AI output. The [user guide](guides/how-to-use.md) explains how to read each idea and apply its safeguards.
 
-## Utforsk de åtte stegene
+## Explore the eight stages
 
-Hvert steg har 32 ideer fordelt på fire temaområder. Hver idé har en egen side med beskrivelse, grunnlag, forutsetninger, konkret eksempel, kontroll, måleforslag og aktuelle prosjektprofiler.
+Every stage contains **32 ideas in four categories**. Each idea page includes the opportunity, required inputs, prerequisites, a worked example, controls, impact metrics, and applicable project profiles.
 
-| Steg | Spørsmålet prosjektet skal svare på | Idéer |
+| Stage | Guiding question | Idea IDs |
 | --- | --- | --- |
-| [Problem](steg/problem.md) | Hvilket problem er verdt å løse? | P01–P32 |
-| [Hypotese](steg/hypotese.md) | Hva forventer vi at endringen skal forbedre? | H01–H32 |
-| [Kontekst](steg/kontekst.md) | Har mennesket og agenten tilstrekkelig riktig grunnlag? | K01–K32 |
-| [Agentutførelse](steg/agentutforelse.md) | Hvilket arbeid kan gjennomføres innen mandatet? | A01–A32 |
-| [Verifisering](steg/verifisering.md) | Har vi tilstrekkelig bevis for riktig og trygg leveranse? | V01–V32 |
-| [Produksjon](steg/produksjon.md) | Kan leveransen tas i bruk under kontroll? | R01–R32 |
-| [Observasjon](steg/observasjon.md) | Hva endret seg i praksis, og hvor sikkert vet vi det? | O01–O32 |
-| [Læring](steg/laering.md) | Hva bør teamet endre neste gang? | L01–L32 |
+| [Problem](stages/problem.md) | What problem is worth solving? | P01–P32 |
+| [Hypothesis](stages/hypothesis.md) | What improvement do we expect, and how will we test it? | H01–H32 |
+| [Context](stages/context.md) | Is the available context accurate, sufficient, and relevant? | K01–K32 |
+| [Agent Execution](stages/agent-execution.md) | What work can the agent safely do within its mandate? | A01–A32 |
+| [Verification](stages/verification.md) | What evidence demonstrates correctness and quality? | V01–V32 |
+| [Production](stages/production.md) | How can we release and adopt the change safely? | R01–R32 |
+| [Observation](stages/observation.md) | What changed after delivery? | O01–O32 |
+| [Learning](stages/learning.md) | What should we improve next? | L01–L32 |
 
-`R` brukes for produksjonssteget for å skille det fra Problem. ID-ene er stabile henvisninger som kan brukes i saker, forsøk og erfaringsrapporter.
+The letter R identifies Production to avoid confusion with Problem (P). Stable IDs let teams link ideas to work items, experiments, and lessons learned.
 
-## Følg faktisk effekt
+## Measure real value, not AI activity
 
-Katalogen legger vekt på samlet innsats, gjennomløpstid, kostnad, kvalitet og faktisk nytte. Ta med tid til kontekst, kontroll, feilretting og vedlikehold når et forsøk vurderes. Skill frigjort kapasitet fra faktisk reduserte utgifter, og følg også negative konsekvenser.
+Track the end-to-end cost and outcome of the work: preparation, context, execution, human review, verification, rework, release, and operations. Pair speed and throughput with quality, security, and user outcomes. Distinguish recovered capacity from actual cash savings.
 
-Hver idé er en mulighet til lokal utprøving. Dokumenter hva som fungerer for hvilke oppgaver, og bruk [måleveiledningen](veiledning/effektmaaling.md) og [læringsmalen](maler.md) til å begrunne videreføring, justering eller avslutning.
+Treat each idea as a hypothesis until tested in your environment with appropriate comparisons and trustworthy data. Use the [impact measurement guide](guides/impact-measurement.md) and [learning templates](templates.md) to record results and decisions.
 
-## Et oppslagsverk som kan forbedres
+## A living reference
 
-Katalogen er laget for utviklingsteam, produktledere, prosjektledere, arkitekter, testere, plattform og drift, sikkerhetsfaglige, analyseansvarlige og prosesseiere. Bruk [begrepslisten](begreper.md) og [metodiske kilder](kilder.md) ved behov.
+This is a continuously improved Markdown catalog for product teams, software engineers, architects, testers, platform and operations specialists, security practitioners, and researchers. See the [glossary](glossary.md) and [sources](sources.md) as needed.
 
-Dette er Markdown-utgaven av mulighetskatalog versjon 1.0 fra 18. november 2026. Den viderefører læringssløyfen og vektleggingen av dokumentert effekt fra referansemodellen for KI i SDLC. Innholdet vedlikeholdes gjennom pull requests; [forvaltningsveiledningen](forvaltning.md) beskriver hvordan ideer og lokale erfaringer kan utvikles videre.
+Version 1.0 dates from November 2026 and is maintained through pull requests. The [maintenance guide](maintenance.md) describes how to preserve stable references, incorporate validated team experience, and improve recommendations over time.

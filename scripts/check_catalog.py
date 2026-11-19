@@ -20,17 +20,17 @@ from urllib.parse import unquote, urlsplit
 
 
 STAGES = {
-    "P": "problem", "H": "hypotese", "K": "kontekst",
-    "A": "agentutforelse", "V": "verifisering", "R": "produksjon",
-    "O": "observasjon", "L": "laering",
+    "P": "problem", "H": "hypothesis", "K": "context",
+    "A": "agent-execution", "V": "verification", "R": "production",
+    "O": "observation", "L": "learning",
 }
 EXPECTED_IDS = {f"{prefix}{number:02}" for prefix in STAGES for number in range(1, 33)}
 SECTIONS = (
-    "Muligheten", "Grunnlag", "Forutsetninger", "Eksempel og leveranse",
-    "Kontroll", "Mål effekt", "Bruk ideen i prosjektet",
+    "Opportunity", "Inputs and Evidence", "Prerequisites", "Example and Deliverable",
+    "Safeguards and Review", "Measuring Impact", "Applying This Idea",
 )
-METADATA = ("Steg", "Temaområde", "Arbeidsform", "Særlig relevant for")
-MODES = {"Rådgivning", "Utforming", "Avgrenset utførelse"}
+METADATA = ("Stage", "Category", "Operating Mode", "Especially Relevant To")
+MODES = {"Advisory", "Drafting", "Bounded Execution"}
 HEADING = re.compile(r"^ {0,3}(#{1,6})[ \t]+(.*?)(?:[ \t]+#+[ \t]*)?$")
 LINK_START = re.compile(r"(?<!\\)!?\[(?:\\.|[^\[\]\\]|\[[^\]\n]*\])*\]\(\s*")
 REFERENCE = re.compile(r"^ {0,3}\[([^\]\n]+)\]:[ \t]*(?:<([^>\n]*)>|(\S+)).*$", re.M)
@@ -205,7 +205,7 @@ def check(root: Path) -> int:
         for message, line in doc.parse_errors:
             error(doc.path, message, line)
 
-    idea_dir = root / "docs" / "ideer"
+    idea_dir = root / "docs" / "ideas"
     idea_docs = {path.stem: doc for path, doc in documents.items() if path.parent == idea_dir}
     for missing in sorted(EXPECTED_IDS - idea_docs.keys()):
         error(idea_dir / f"{missing}.md", "required idea is missing")
@@ -223,7 +223,7 @@ def check(root: Path) -> int:
             values = re.findall(r"^[ \t]*[-*][ \t]+\*\*" + re.escape(label) + r":\*\*[ \t]*(\S[^\n]*)$", doc.text, re.M)
             if len(values) != 1:
                 error(doc.path, f"expected one nonempty metadata field: {label}")
-            elif label == "Arbeidsform" and values[0].strip() not in MODES:
+            elif label == "Operating Mode" and values[0].strip() not in MODES:
                 error(doc.path, f"unrecognized working mode: {values[0]}")
         h2 = [(title, line) for level, title, line in doc.headings if level == 2]
         for section in SECTIONS:
@@ -295,11 +295,11 @@ def check(root: Path) -> int:
             error(path, f"unexpected idea link: {idea_id}")
 
     for prefix, stage in STAGES.items():
-        check_index(root / "docs" / "steg" / f"{stage}.md", {f"{prefix}{number:02}" for number in range(1, 33)})
+        check_index(root / "docs" / "stages" / f"{stage}.md", {f"{prefix}{number:02}" for number in range(1, 33)})
     for path in documents:
-        if path.parent == root / "docs" / "steg" and path.stem not in STAGES.values():
+        if path.parent == root / "docs" / "stages" and path.stem not in STAGES.values():
             error(path, "unexpected stage file; the catalog has eight stages")
-    check_index(root / "docs" / "register.md", EXPECTED_IDS)
+    check_index(root / "docs" / "idea-index.md", EXPECTED_IDS)
     if errors:
         print(f"Catalog validation failed with {len(errors)} error(s):", file=sys.stderr)
         for message in errors:

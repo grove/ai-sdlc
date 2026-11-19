@@ -1,42 +1,55 @@
-# KI i SDLC — mulighetskatalog
+# AI in the SDLC: 256 Practical Opportunities
 
-**256 konkrete ideer for hvordan prosjekter kan bruke KI gjennom hele systemutviklingens læringssløyfe.** Katalogen kobler oppgaver og forventet nytte til nødvendig grunnlag, kontroll og effektmåling.
+**A searchable catalog of AI use cases across the software development life cycle (SDLC), grounded in measurable improvements to team effectiveness.**
 
-**[Les katalogen](docs/index.md)** · **[Finn ideer ut fra behov](docs/veiledning/behov.md)** · **[Alle 256 ideene](docs/register.md)**
+[Browse the catalog](docs/index.md) · [Find opportunities by need](docs/guides/find-by-need.md) · [Explore all 256 ideas](docs/idea-index.md) · [Published site](https://grove.github.io/ai-sdlc/)
 
-Problem → Hypotese → Kontekst → Agentutførelse → Verifisering → Produksjon → Observasjon → Læring
+**The learning loop:** Problem → Hypothesis → Context → Agent Execution → Verification → Production → Observation → Learning.
 
-## Innhold
+The catalog is intended for developers, product teams, architects, quality and security specialists, platform engineers, and leaders. Every idea describes required inputs, prerequisites, a concrete example, safeguards, measurement suggestions, and relevant project types. AI adoption alone is not a benefit: the goal is demonstrably faster, lower-cost, higher-quality delivery with better outcomes.
 
-| Steg | Ideer | Formål |
+## Explore the eight stages
+
+| Stage | Ideas | Guiding question |
 | --- | --- | --- |
-| [Problem](docs/steg/problem.md) | P01–P32 | Finne et dokumentert problem som er verdt å løse. |
-| [Hypotese](docs/steg/hypotese.md) | H01–H32 | Formulere forventet effekt og planlegge et troverdig forsøk. |
-| [Kontekst](docs/steg/kontekst.md) | K01–K32 | Gi mennesker og agenter riktig og tilstrekkelig grunnlag. |
-| [Agentutførelse](docs/steg/agentutforelse.md) | A01–A32 | Gjennomføre avgrenset arbeid og lage vurderbare leveranser. |
-| [Verifisering](docs/steg/verifisering.md) | V01–V32 | Kontrollere korrekthet, kvalitet og risiko med etterprøvbare bevis. |
-| [Produksjon](docs/steg/produksjon.md) | R01–R32 | Ta riktig leveranse i bruk med kontroll og beredskap. |
-| [Observasjon](docs/steg/observasjon.md) | O01–O32 | Undersøke faktisk nytte, kostnader og uønskede følger. |
-| [Læring](docs/steg/laering.md) | L01–L32 | Endre praksis ut fra det prosjektet faktisk har lært. |
+| [Problem](docs/stages/problem.md) | P01–P32 | What problem is worth solving? |
+| [Hypothesis](docs/stages/hypothesis.md) | H01–H32 | What measurable improvement do we expect? |
+| [Context](docs/stages/context.md) | K01–K32 | Do people and agents have reliable, relevant context? |
+| [Agent Execution](docs/stages/agent-execution.md) | A01–A32 | What work can AI safely perform within its authorized scope? |
+| [Verification](docs/stages/verification.md) | V01–V32 | What evidence shows the result is correct and safe? |
+| [Production](docs/stages/production.md) | R01–R32 | How can the change be released and adopted safely? |
+| [Observation](docs/stages/observation.md) | O01–O32 | What changed after delivery, and how confident are we? |
+| [Learning](docs/stages/learning.md) | L01–L32 | What should we improve in the next iteration? |
 
-Katalogen inneholder også [åtte arbeidsløp](docs/arbeidslop.md), [tilpasning til 16 prosjektprofiler](docs/prosjektprofiler.md), [måleveiledning](docs/veiledning/effektmaaling.md), [maler](docs/maler.md), [begreper](docs/begreper.md) og [kilder](docs/kilder.md).
+The letter R identifies Production to distinguish it from Problem (P). Idea IDs stay stable for reference in project backlogs, experiments, and lessons learned.
 
-Innholdet er på norsk bokmål og viderefører den komplette mulighetskatalogen fra 18. november 2026. Hver idé har en egen Markdown-fil og en stabil ID. Markdown-filene i `docs/` er den redigerbare kilden; nettstedet bygges fra de samme filene.
+The catalog also includes [eight end-to-end workflows](docs/workflows.md), [16 project profiles](docs/project-profiles.md), an [impact measurement guide](docs/guides/impact-measurement.md), [templates](docs/templates.md), a [glossary](docs/glossary.md), and [source references](docs/sources.md).
 
-## Rediger innhold
+## Use the catalog
 
-- Endre en idé i `docs/ideer/<ID>.md`. Bevar ID-en når du forbedrer teksten.
-- Bevar beskrivelse, grunnlag, forutsetninger, eksempel, kontroll, effektmåling, arbeidsform og prosjektprofiler.
-- Oppdater tilhørende stegoversikt og [idéregisteret](docs/register.md) når en tittel eller plassering endres.
-- Bruk relative `.md`-lenker, for eksempel `[P01](../ideer/P01.md)`, slik at lenkene fungerer både i GitHub og på nettstedet.
-- Bruk eksplisitte, stabile HTML-ankere når du trenger fragmentlenker som skal fungere likt begge steder. Norske overskrifter kan få ulike automatiske ankere.
-- Beskriv forventet effekt som en hypotese. Dokumenter lokale målinger og forutsetninger når en idé faktisk er prøvd.
+1. Identify a meaningful problem supported by evidence.
+2. Find relevant opportunities through the [needs guide](docs/guides/find-by-need.md) or [idea index](docs/idea-index.md).
+3. Design a bounded experiment with a baseline, a primary metric, quality guardrails, and an accountable owner.
+4. Follow the full learning loop, not merely the speed of initial AI output.
+5. Record the actual impact, including human review, rework, model and infrastructure costs, and business or user outcomes.
 
-Ved utvidelse med nye ideer må antall og ID-serier oppdateres i katalogoversiktene og i kontrollskriptet. Se også [forvaltning av katalogen](docs/forvaltning.md).
+Every idea is a candidate for local evaluation, not a promised benefit. Recovered capacity is not automatically a reduction in cash spending.
 
-## Forhåndsvis og kontroller lokalt
+## Edit and contribute
 
-Bruk Python 3.12 og et virtuelt miljø:
+The Markdown files under the docs directory are the maintained source of the published site. Each of the 256 ideas is a separate file in the docs/ideas directory.
+
+- Preserve stable idea IDs and each idea's description, inputs, prerequisites, example, safeguards, measurements, operating mode, and project types.
+- When changing an idea title or category, update the relevant stage overview and [idea index](docs/idea-index.md).
+- Use relative Markdown links so that navigation works both on GitHub and on the generated site.
+- Use explicit HTML IDs for anchors that must work consistently across both interfaces.
+- Document outcomes with measurement methods, limitations, and decision criteria.
+
+See [catalog maintenance](docs/maintenance.md) for how to add new evidence and ideas.
+
+## Build and preview locally
+
+Use Python 3.12, then run the following commands:
 
 ```sh
 python -m venv .venv
@@ -47,26 +60,20 @@ python -m mkdocs build --strict
 python -m mkdocs serve
 ```
 
-På Windows aktiveres miljøet med `.venv\Scripts\Activate.ps1` i PowerShell. Åpne adressen som `mkdocs serve` skriver ut, normalt `http://127.0.0.1:8000/ai-sdlc/`.
+On Windows, activate the environment using `.venv\\Scripts\\Activate.ps1` in PowerShell. MkDocs prints a local preview URL when the server starts. Do not commit generated site files or the local virtual environment.
 
-Kontrollskriptet undersøker katalogens ID-er, obligatoriske idéseksjoner, stegoversikter, register og interne lenker. MkDocs bygger med streng validering. Generert innhold i `site/` og det lokale miljøet skal ikke sjekkes inn.
+The catalog check verifies stable IDs, required fields, stage indexes, the idea index, and internal links. The strict MkDocs build validates navigation and linked anchors.
 
-## Publiser på GitHub Pages
+## Publish on GitHub Pages
 
-[Dokumentasjonsworkflowen](.github/workflows/docs.yml) kontrollerer og bygger nettstedet på pull requests. Den publiserer bare ved push til `main` eller manuell kjøring fra `main`.
+The [documentation workflow](.github/workflows/docs.yml) validates pull requests. It deploys only after a change reaches main or on a manual run from main.
 
-Før første publisering må en administrator gjøre dette én gang:
+**One-time setup:** In repository **Settings → Pages → Build and deployment**, set **Source** to **GitHub Actions**. Once merged and deployed, the site is available at [https://grove.github.io/ai-sdlc/](https://grove.github.io/ai-sdlc/). GitHub Pages environment approvals, if configured, still apply.
 
-1. Åpne **Settings → Pages** i dette repoet.
-2. Velg **GitHub Actions** under **Build and deployment → Source**.
-3. Innlem dokumentasjonsendringen i `main`, eller kjør **Actions → Dokumentasjon → Run workflow** fra `main`.
+The workflow uses GitHub's built-in token, restricts write permissions to deployment, and pins its build dependencies and actions.
 
-Etter vellykket publisering er nettstedets adresse **[https://grove.github.io/ai-sdlc/](https://grove.github.io/ai-sdlc/)**. Deployment-jobben viser også den faktiske adressen. Hvis miljøet `github-pages` har godkjenningsregler, gjelder de også for denne workflowen.
+See [GitHub's custom Pages workflow guidance](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages) and the [MkDocs deployment guide](https://www.mkdocs.org/user-guide/deploying-your-docs/).
 
-Publiseringen bruker GitHubs innebygde token og trenger ingen egne deploy-hemmeligheter. Byggejobben har bare lesetilgang; bare deployment-jobben får rettigheter til Pages og OIDC. Python-avhengigheter er versjonslåst, og Actions er låst til commit-SHA-er. Oppgrader dem i en egen PR med katalogkontroll og nytt strict-bygg.
-
-Oppsettet følger [GitHubs veiledning for egne Pages-workflower](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages) og [MkDocs' publiseringsmodell](https://www.mkdocs.org/user-guide/deploying-your-docs/).
-
-## Lisens
+## License
 
 [Apache License 2.0](LICENSE).
